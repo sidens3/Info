@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A03EB412855FD5A00A99F36 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A03EB402855FD5A00A99F36 /* Kingfisher */; };
 		4AA6EB3F284F8F0F005BFA4B /* InfoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6EB3E284F8F0F005BFA4B /* InfoApp.swift */; };
 		4AA6EB41284F8F0F005BFA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6EB40284F8F0F005BFA4B /* ContentView.swift */; };
 		4AA6EB43284F8F10005BFA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6EB42284F8F10005BFA4B /* Assets.xcassets */; };
 		4AA6EB46284F8F10005BFA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6EB45284F8F10005BFA4B /* Preview Assets.xcassets */; };
 		4AE3B5EC2851ED2E001E4F4F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE3B5EB2851ED2E001E4F4F /* Alamofire */; };
+		4AFD30602852454100979186 /* CountriesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD305F2852454100979186 /* CountriesScreenView.swift */; };
+		4AFD306728524D7800979186 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD306628524D7800979186 /* CountriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		4AA6EB40284F8F0F005BFA4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AA6EB42284F8F10005BFA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA6EB45284F8F10005BFA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AFD305F2852454100979186 /* CountriesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesScreenView.swift; sourceTree = "<group>"; };
+		4AFD306628524D7800979186 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A03EB412855FD5A00A99F36 /* Kingfisher in Frameworks */,
 				4AE3B5EC2851ED2E001E4F4F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,8 +59,11 @@
 		4AA6EB3D284F8F0F005BFA4B /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				4AFD305D2852433400979186 /* View */,
+				4AFD305C2852432500979186 /* ViewModel */,
+				4AFD305B2852431C00979186 /* Model */,
+				4AFD3061285245E400979186 /* Services */,
 				4AA6EB3E284F8F0F005BFA4B /* InfoApp.swift */,
-				4AA6EB40284F8F0F005BFA4B /* ContentView.swift */,
 				4AA6EB42284F8F10005BFA4B /* Assets.xcassets */,
 				4AA6EB44284F8F10005BFA4B /* Preview Content */,
 			);
@@ -67,6 +76,45 @@
 				4AA6EB45284F8F10005BFA4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AFD305B2852431C00979186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFD305C2852432500979186 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AFD306628524D7800979186 /* CountriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4AFD305D2852433400979186 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AFD305E2852452400979186 /* Countries */,
+				4AA6EB40284F8F0F005BFA4B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AFD305E2852452400979186 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				4AFD305F2852454100979186 /* CountriesScreenView.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		4AFD3061285245E400979186 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +135,7 @@
 			name = Info;
 			packageProductDependencies = (
 				4AE3B5EB2851ED2E001E4F4F /* Alamofire */,
+				4A03EB402855FD5A00A99F36 /* Kingfisher */,
 			);
 			productName = Info;
 			productReference = 4AA6EB3B284F8F0F005BFA4B /* Info.app */;
@@ -118,6 +167,7 @@
 			mainGroup = 4AA6EB32284F8F0E005BFA4B;
 			packageReferences = (
 				4AE3B5EA2851ED2E001E4F4F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4A03EB3F2855FD5A00A99F36 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 4AA6EB3C284F8F0F005BFA4B /* Products */;
 			projectDirPath = "";
@@ -146,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA6EB41284F8F0F005BFA4B /* ContentView.swift in Sources */,
+				4AFD306728524D7800979186 /* CountriesViewModel.swift in Sources */,
 				4AA6EB3F284F8F0F005BFA4B /* InfoApp.swift in Sources */,
+				4AFD30602852454100979186 /* CountriesScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -295,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +366,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -325,7 +379,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -353,6 +407,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4A03EB3F2855FD5A00A99F36 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		4AE3B5EA2851ED2E001E4F4F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -364,6 +426,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4A03EB402855FD5A00A99F36 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A03EB3F2855FD5A00A99F36 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		4AE3B5EB2851ED2E001E4F4F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4AE3B5EA2851ED2E001E4F4F /* XCRemoteSwiftPackageReference "Alamofire" */;
