@@ -23,13 +23,15 @@ struct NewsListScreenView: View {
                 .onSubmit {
                     viewModel.performSearch()
                 }
-            List {
-                Section {
-                    ForEach($viewModel.articles) { article in
-                        NewsListView(data: article)
+            LoadingView(isShowing: $viewModel.isSearchEnabled) {
+                List {
+                    Section {
+                        ForEach($viewModel.articles) { article in
+                            NewsListView(data: article)
+                        }
                     }
-                }
-            }.resignKeyboardOnDragGesture()
+                }.resignKeyboardOnDragGesture()
+            }
         }.onViewDidLoad {
             viewModel.resetSearch()
         }

@@ -57,7 +57,10 @@ class NewsListViewModel: BaseViewModel {
 private extension NewsListViewModel {
     
     func makeSearch(for text: String) {
-        guard text.count > Constants.minSearchCharactersCount else { return }
+        guard text.count > Constants.minSearchCharactersCount else {
+            isSearchEnabled = false
+            return
+        }
         let workItem = DispatchWorkItem { [weak self] in
             self?.getNews(for: text)
         }
