@@ -16,12 +16,14 @@ struct NewsListScreenView: View {
     }
     
     var body: some View {
-        TextField("Search", text: $viewModel.searchText)
+        TextField("Ваш запрос", text: $viewModel.searchText)
             .textFieldStyle(.roundedBorder)
             .padding(16)
             .onSubmit {
                 viewModel.performSearch()
             }
+        Spacer()
+        
     }
 }
 
