@@ -21,7 +21,11 @@ struct NewsListScreenView: View {
                 LoadingView(isShowing: $viewModel.isSearchEnabled) {
                     List {
                         ForEach($viewModel.articles) { data in
-                            NewsListView(data: data)
+                            NavigationLink {
+                                WebView(url: URL(string: "https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation"))
+                            } label: {
+                                NewsListView(data: data)
+                            }
                         }
                     }.resignKeyboardOnDragGesture()
                 }
@@ -29,8 +33,7 @@ struct NewsListScreenView: View {
                 viewModel.resetSearch()
             }
             .searchable(text: $viewModel.searchText, prompt: "Ваш запрос")
-//            .navigationTitle("Новости") // TODO: nav title destroy tabBar presentation
-//            .navigationBarTitleDisplayMode(.automatic)
+            .navigationTitle("Новости")
         }
     }
 }
