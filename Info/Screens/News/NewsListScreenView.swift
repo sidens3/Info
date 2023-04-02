@@ -30,7 +30,7 @@ struct NewsListScreenView: View {
                     }
                 }
             }
-        }.onAppear {
+        }.onViewDidLoad {
             viewModel.resetSearch()
         }
     }
