@@ -28,13 +28,11 @@ struct CountriesScreenView: View {
             Spacer()
             KFImage(viewModel.imageUrl)
                 .placeholder {
-                    ZStack {
+                    Image("placeholder")
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(8)
                         
-                        Image(systemName: "arrow.down.doc.fill")
-                        .symbolRenderingMode(.monochrome)
-                        .foregroundColor(Color.accentColor)
-                        .font(.system(size: 16, weight: .regular))
-                    }
                 }
                 .background(.secondary)
                 .cornerRadius(8)

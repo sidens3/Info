@@ -14,11 +14,11 @@ struct NewsListView: View {
     var body: some View {
         HStack {
             KFImage(URL(string: data.article.urlToImage ?? ""))
-                .placeholder({
+                .placeholder {
                     Image("placeholder")
                         .resizable()
                         .scaledToFit()
-                })
+                }
                 .resizable()
                 .frame(width: 60, height: 60, alignment: .center)
                 .cornerRadius(16)
