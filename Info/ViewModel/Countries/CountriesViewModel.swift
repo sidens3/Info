@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class CountriesViewModel: ObservableObject {
+class CountriesViewModel: BaseViewModel {
     var imageUrl: URL? = nil
     @Published var isSearchEnabled: Bool = false
     @Published var searchText: String = "" {

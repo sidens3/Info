@@ -59,7 +59,7 @@ struct CountriesScreenView: View {
             .padding( 16)
 
         }.navigationTitle("Flags")
-            .background(.mint)
+            .background(Color(uiColor: .systemBackground))
     }
 }
 

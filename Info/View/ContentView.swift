@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         let tabView = TabView(selection: $tabSelection) {
             
-            NewsListScreenView()
+            NewsListScreenView(viewModel: NewsListViewModel(networkManager: NetworkManager.shared))
                 .tag(0)
                 .tabItem {
                     Image(systemName: "newspaper")
