@@ -10,7 +10,6 @@ import SwiftUI
 struct NewsListScreenView: View {
     
     @StateObject var viewModel: NewsListViewModel
-    @State var isPresented: Bool = false
     
     init(viewModel: NewsListViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
