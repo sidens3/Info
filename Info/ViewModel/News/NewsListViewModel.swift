@@ -16,6 +16,7 @@ class NewsListViewModel: BaseViewModel {
         static let defaultSearchText = "Недавнее"
     }
     
+    @Published var articles: [ArticleListObject] = []
     @Published var isSearchEnabled: Bool = false
     @Published var searchText: String = "" {
         didSet {
@@ -30,7 +31,6 @@ class NewsListViewModel: BaseViewModel {
     private var newsWorkItem: DispatchWorkItem?
     
     private var totalResults: Int = 0
-    private var articles: [Article] = []
     
     // MARK: Init
     init(networkManager: NewsManaging) {
@@ -42,7 +42,7 @@ class NewsListViewModel: BaseViewModel {
         //        selectNewsHandler?(articles[index])
     }
     
-    func resetSearchText() {
+    func resetSearch() {
         searchText.removeAll()
         makeSearch(for: Constants.defaultSearchText)
     }
@@ -70,7 +70,7 @@ private extension NewsListViewModel {
         networkManager.requestNews(query: text) { [weak self] result in
             switch result {
             case .success(let value):
-                self?.articles = value.articles
+                self?.articles = value.articles.map {ArticleListObject(article: $0)}
                 self?.totalResults = value.totalResults
                 self?.isSearchEnabled = false
             case .failure(let error):

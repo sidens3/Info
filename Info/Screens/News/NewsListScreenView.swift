@@ -16,14 +16,23 @@ struct NewsListScreenView: View {
     }
     
     var body: some View {
-        TextField("Ваш запрос", text: $viewModel.searchText)
-            .textFieldStyle(.roundedBorder)
-            .padding(16)
-            .onSubmit {
-                viewModel.performSearch()
+        VStack {
+            TextField("Ваш запрос", text: $viewModel.searchText)
+                .textFieldStyle(.roundedBorder)
+                .padding(16)
+                .onSubmit {
+                    viewModel.performSearch()
+                }
+            List {
+                Section {
+                    ForEach($viewModel.articles) { article in
+                        NewsListView(data: article)
+                    }
+                }
             }
-        Spacer()
-        
+        }.onAppear {
+            viewModel.resetSearch()
+        }
     }
 }
 
