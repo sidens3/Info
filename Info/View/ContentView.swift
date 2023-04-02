@@ -9,12 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var selection = 0
+    @State var tabSelection: Int = 0
     
     var body: some View {
-        let tabView = TabView(selection: $selection) {
-            CountriesScreenView(viewModel: CountriesViewModel())
+        let tabView = TabView(selection: $tabSelection) {
+            
+            NewsListScreenView()
                 .tag(0)
+                .tabItem {
+                    Image(systemName: "newspaper")
+                    Text("News")
+                }
+            
+            CountriesScreenView(viewModel: CountriesViewModel())
+                .tag(1)
                 .tabItem {
                     Image(systemName: "flag")
                     Text("Countries")
