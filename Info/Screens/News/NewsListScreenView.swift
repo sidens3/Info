@@ -26,8 +26,14 @@ struct NewsListScreenView: View {
             LoadingView(isShowing: $viewModel.isSearchEnabled) {
                 List {
                     Section {
-                        ForEach($viewModel.articles) { article in
-                            NewsListView(data: article)
+                        ForEach($viewModel.articles) { data in
+                            NewsListView(data: data)
+                                .onTapGesture {
+                                    guard let string = data.article.url as? String, let url = URL(string: string ) else { return }
+                                    NavigationLink("Детали") {
+                                        WebView(url: url)
+                                    }
+                            }
                         }
                     }
                 }.resignKeyboardOnDragGesture()

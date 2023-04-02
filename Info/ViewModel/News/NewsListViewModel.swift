@@ -21,7 +21,6 @@ class NewsListViewModel: BaseViewModel {
     @Published var searchText: String = "" {
         didSet {
             newsWorkItem?.cancel()
-//            isSearchEnabled = (searchText.count > Constants.minSearchCharactersCount)
             performSearch()
         }
     }
@@ -35,11 +34,6 @@ class NewsListViewModel: BaseViewModel {
     // MARK: Init
     init(networkManager: NewsManaging) {
         self.networkManager = networkManager
-    }
-    
-    func selectNews(by index: Int) {
-        guard articles.count > index else { return }
-        //        selectNewsHandler?(articles[index])
     }
     
     func resetSearch() {

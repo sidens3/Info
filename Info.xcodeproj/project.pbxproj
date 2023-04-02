@@ -27,6 +27,7 @@
 		4AF02DE829D993F200AE9B3D /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF02DE729D993F200AE9B3D /* StatefulPreviewWrapper.swift */; };
 		4AF02DEC29D99E5A00AE9B3D /* Keyboard+ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF02DEB29D99E5A00AE9B3D /* Keyboard+ViewModifiers.swift */; };
 		4AF02DF029D9A23A00AE9B3D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF02DEF29D9A23A00AE9B3D /* LoadingView.swift */; };
+		4AF02DF429D9AE1E00AE9B3D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF02DF329D9AE1E00AE9B3D /* WebView.swift */; };
 		4AFD30602852454100979186 /* CountriesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD305F2852454100979186 /* CountriesScreenView.swift */; };
 		4AFD306728524D7800979186 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD306628524D7800979186 /* CountriesViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		4AF02DE729D993F200AE9B3D /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		4AF02DEB29D99E5A00AE9B3D /* Keyboard+ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+ViewModifiers.swift"; sourceTree = "<group>"; };
 		4AF02DEF29D9A23A00AE9B3D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4AF02DF329D9AE1E00AE9B3D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4AFD305F2852454100979186 /* CountriesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesScreenView.swift; sourceTree = "<group>"; };
 		4AFD306628524D7800979186 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				4AF02DEF29D9A23A00AE9B3D /* LoadingView.swift */,
+				4AF02DF329D9AE1E00AE9B3D /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF02DE529D991B200AE9B3D /* ViewDidLoadModifier.swift in Sources */,
+				4AF02DF429D9AE1E00AE9B3D /* WebView.swift in Sources */,
 				4AF02DD929D9691600AE9B3D /* NewsListViewModel.swift in Sources */,
 				4AF02DE829D993F200AE9B3D /* StatefulPreviewWrapper.swift in Sources */,
 				4AF02DE129D9854A00AE9B3D /* ArticleListObject.swift in Sources */,
