@@ -18,12 +18,6 @@ struct NewsListScreenView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Ваш запрос", text: $viewModel.searchText)
-                    .textFieldStyle(.roundedBorder)
-                    .padding(16)
-                    .onSubmit {
-                        viewModel.performSearch()
-                    }
                 LoadingView(isShowing: $viewModel.isSearchEnabled) {
                     List {
                         ForEach($viewModel.articles) { data in
@@ -34,6 +28,9 @@ struct NewsListScreenView: View {
             }.onViewDidLoad {
                 viewModel.resetSearch()
             }
+            .searchable(text: $viewModel.searchText, prompt: "Ваш запрос")
+//            .navigationTitle("Новости") // TODO: nav title destroy tabBar presentation
+//            .navigationBarTitleDisplayMode(.automatic)
         }
     }
 }
