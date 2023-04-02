@@ -29,7 +29,7 @@ struct NewsListScreenView: View {
                         NewsListView(data: article)
                     }
                 }
-            }
+            }.resignKeyboardOnDragGesture()
         }.onViewDidLoad {
             viewModel.resetSearch()
         }
