@@ -22,7 +22,7 @@ struct NewsListScreenView: View {
                     List {
                         ForEach($viewModel.articles) { data in
                             NavigationLink {
-                                WebView(url: URL(string: "https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation"))
+                                WebView(type: .public, url: "https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation")
                             } label: {
                                 NewsListView(data: data)
                             }

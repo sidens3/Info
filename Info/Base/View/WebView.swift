@@ -8,17 +8,36 @@
 import SwiftUI
 import WebKit
 
+enum WebViewNavigationAction {
+    case backward, forward, reload
+}
+
+enum URLType {
+    case local, `public`
+}
+
 struct WebView: UIViewRepresentable {
 
-    var url: URL?
+    var type: URLType
+    var url: String?
 
     func makeUIView(context: Context) -> WKWebView {
-        return WKWebView()
+        let preferences = WKPreferences()
+        
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        
+        let webView = WKWebView(frame: CGRect.zero, configuration: configuration)
+        webView.allowsBackForwardNavigationGestures = true
+        webView.scrollView.isScrollEnabled = true
+        return webView
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {
-        guard let url = url else { return }
-        let request = URLRequest(url: url)
-        webView.load(request)
+        if let urlValue = url  {
+            if let requestUrl = URL(string: urlValue) {
+                webView.load(URLRequest(url: requestUrl))
+            }
+        }
     }
 }
