@@ -1,3 +1,3 @@
 # Info
 
-Приложение для получения новостей. Использовалось: Swift, UIKit, SPM, MVVM, Kingfisher, Alamofire
+Приложение для получения новостей. Использовалось: Swift, SwiftUI, SPM, MVVM, Kingfisher, Alamofire
