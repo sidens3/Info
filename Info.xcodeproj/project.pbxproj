@@ -96,7 +96,6 @@
 				4AF02DD329D9678E00AE9B3D /* Network */,
 				4AFD305B2852431C00979186 /* Model */,
 				4AF02DE329D9919300AE9B3D /* Modifiers */,
-				4AF02DE229D9918200AE9B3D /* Extensions */,
 				4AA6EB3E284F8F0F005BFA4B /* InfoApp.swift */,
 				4AA6EB40284F8F0F005BFA4B /* ContentView.swift */,
 				4AA6EB42284F8F10005BFA4B /* Assets.xcassets */,
@@ -182,13 +181,6 @@
 				4AF02DDE29D9712B00AE9B3D /* NewsListView.swift */,
 			);
 			path = News;
-			sourceTree = "<group>";
-		};
-		4AF02DE229D9918200AE9B3D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4AF02DE329D9919300AE9B3D /* Modifiers */ = {
@@ -477,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Info/Preview Content\"";
-				DEVELOPMENT_TEAM = H7K76ZRYMQ;
+				DEVELOPMENT_TEAM = 656PZ88AYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -492,7 +484,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.mikhailzinovev.Info;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sidens.Info;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -508,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Info/Preview Content\"";
-				DEVELOPMENT_TEAM = H7K76ZRYMQ;
+				DEVELOPMENT_TEAM = 656PZ88AYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -523,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.mikhailzinovev.Info;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sidens.Info;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
